@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name — personal page</title>
+    <meta name="description" content="Personal page: short bio, projects, skills, contacts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">Dmitry Vengerov</div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!-- <a class="btn btn-ghost" href="mailto:@example.com">Contact</a> -->
+    </header>
+
+    <main class="page">
+        <section class="hero" id="top">
+            <p class="eyebrow">CTO / Founding Engineer / Teamlead / Techlead</p>
+            <h1>Hi, I'm Dmitry Vengerov. I build high-load systems, fintech, and AI products.</h1>
+            <p class="lede">8+ years: HFT in Rust, microservices in Node.js and Python, React/TypeScript frontends, teams up to 15 engineers. Obsessed with architecture, delivery speed, and engineering quality.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="mailto:contact@example.com">Email me</a>
+                <!-- <a class="btn btn-ghost" href="#projects">View projects</a> -->
+                <a class="btn btn-ghost" href="./static/Dmitry_Vengerov_CV.pdf" download>Download CV (PDF)</a>
+            </div>
+            <div class="meta">
+                <span>Locations: Serbia / UAE / Russia / remote</span>
+                <span>Availability: projects, consulting, techlead</span>
+            </div>
+        </section>
+
+        <section class="panel" id="about">
+            <div class="panel-header">
+                <div class="panel-title">About</div>
+            </div>
+            <p>CTO and technical leader across fintech, AI, and high-load systems. Led distributed teams up to 15 engineers, set up processes, owned releases and 24/7 reliability. Drove monolith-to-microservices migrations, improved architecture, raised
+                engineering culture, and mentored.</p>
+        </section>
+
+        <section class="panel" id="experience">
+            <div class="panel-header">
+                <div class="panel-title">Experience</div>
+                <span class="panel-meta">Recent roles</span>
+            </div>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-head">
+                        <h3>SkyBot Token Capital — CTO</h3>
+                        <div class="experience-meta">
+                            <span>Jan 2024 — Present</span>
+                            <!-- <span>Dubai</span> -->
+                        </div>
+                    </div>
+                    <p>Built crypto analytics & trading stack: real-time market data processing, HFT system in Rust, microservices in Node.js, Electron admin client, migration from monolith to microservices, 24/7 ops.</p>
+                    <ul class="tags">
+                        <li>Rust</li>
+                        <li>Node.js (Nest)</li>
+                        <li>NATS / RabbitMQ</li>
+                        <li>PostgreSQL / ClickHouse</li>
+                        <li>AWS / OVH</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-head">
+                        <h3>Stealth Startup — Head of RnD / Founding Engineer</h3>
+                        <div class="experience-meta">
+                            <span>Jun 2023 — Jun 2024</span>
+                        </div>
+                    </div>
+                    <p>Designed autonomous drone firmware and autopilot with anomaly mapping, built data accounting system, OpenCV-based pupil dynamics analysis, delivered Electron admin app and backend services.</p>
+                    <ul class="tags">
+                        <li>Python (aiohttp/Tornado)</li>
+                        <li>React / Electron</li>
+                        <li>PostgreSQL</li>
+                        <li>AWS</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-head">
+                        <h3>SKL.vc — Foundation Engineer</h3>
+                        <div class="experience-meta">
+                            <span>Dec 2022 — Dec 2023</span>
+                        </div>
+                    </div>
+                    <p>Architected microservices and analytics tools, integrated third-party APIs, improved scalability and delivery processes for distributed teams, supported B2B SaaS in crypto/fin data.</p>
+                    <ul class="tags">
+                        <li>Node.js (Nest)</li>
+                        <li>Python (FastAPI/aiohttp)</li>
+                        <li>NATS / RabbitMQ</li>
+                        <li>PostgreSQL / MongoDB</li>
+                        <li>AWS / Hetzner</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-head">
+                        <h3>MetaMap — Team Lead → Staff Engineer</h3>
+                        <div class="experience-meta">
+                            <span>Jan 2022 — Dec 2022</span>
+                        </div>
+                    </div>
+                    <p>Led two cross-functional teams (6 and 10 people), owned release readiness and incident response, decomposed Python monolith into microservices, introduced caching to cut provider costs.</p>
+                    <ul class="tags">
+                        <li>Node.js (Express/Molecular)</li>
+                        <li>Python (aiohttp)</li>
+                        <li>RabbitMQ</li>
+                        <li>PostgreSQL / MongoDB</li>
+                        <li>Reliability / On-call</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" id="skills">
+            <div class="panel-header">
+                <div class="panel-title">Skills & stack</div>
+                <span class="panel-meta">Concise & relevant</span>
+            </div>
+            <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">Rust</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">TypeScript / React</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">ClickHouse</span>
+                <span class="chip">NATS / RabbitMQ</span>
+                <span class="chip">AWS / OVH / Hetzner</span>
+                <span class="chip">Microservices</span>
+                <span class="chip">System Design</span>
+                <span class="chip">Team Leadership</span>
+            </div>
+        </section>
+
+        <section class="panel highlight" id="contact">
+            <div class="panel-header">
+                <div class="panel-title">Contact</div>
+                <span class="panel-meta">Reply within N hours</span>
+            </div>
+            <p>Open to CTO/Techlead/Founding engineer roles, project consulting, and architecture reviews. Prefer fast syncs and clear goals.</p>
+            <div class="cta">
+                <a class="btn btn-primary" href="mailto:contact@example.com">Email</a>
+                <a class="btn btn-ghost" href="#top">Back to top</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="logo">Dmitry Vengerov</div>
+        <div class="footer-links">
+            <a href="#top">Back to top</a>
+            <a href="https://github.com/vngrv/vngrv" target="_blank" rel="noreferrer">Source</a>
+        </div>
+        <div class="footer-meta">Updated: 2026</div>
+    </footer>
+</body>
+
+</html>
