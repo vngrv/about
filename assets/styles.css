@@ -1,14 +1,13 @@
 :root {
-    --bg: #0f1117;
-    --bg-2: #131827;
-    --card: #161c2f;
-    --stroke: #1f2940;
-    --text: #e8edf5;
-    --muted: #9aa3b5;
-    --accent: #7c3aed;
-    --accent-2: #22d3ee;
-    --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-    --radius: 16px;
+    --bg: #050910;
+    --card: #0c1220;
+    --stroke: #1a2435;
+    --text: #d0dce8;
+    --muted: #8fa1bd;
+    --accent: #7fe7ff;
+    --accent-2: #ffb84d;
+    --shadow: 0 10px 40px rgba(5, 12, 24, 0.65);
+    --radius: 14px;
 }
 
 * {
@@ -18,7 +17,8 @@
 body {
     margin: 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image: radial-gradient(circle at 20% 20%, rgba(127, 231, 255, 0.06), transparent 25%), radial-gradient(circle at 80% 10%, rgba(255, 184, 77, 0.05), transparent 22%), radial-gradient(circle at 60% 70%, rgba(127, 231, 255, 0.04), transparent 28%), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 32px), repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 32px);
     color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
@@ -40,7 +40,7 @@ button:focus-visible {
 }
 
 .page {
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto;
     padding: 112px 24px 120px;
 }
@@ -87,30 +87,34 @@ button:focus-visible {
     justify-content: center;
     gap: 8px;
     padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--stroke);
+    border-radius: 10px;
+    border: 1px solid var(--accent);
     color: var(--text);
     font-weight: 600;
-    transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
     transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-2);
 }
 
 .btn-primary {
     background: var(--accent);
     border-color: transparent;
-    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.35);
+    color: #021017;
+    box-shadow: 0 8px 30px rgba(127, 231, 255, 0.35);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 12px 36px rgba(124, 58, 237, 0.45);
+    box-shadow: 0 12px 36px rgba(127, 231, 255, 0.45);
 }
 
 .btn-ghost {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--stroke);
 }
 
 .hero {
@@ -131,6 +135,9 @@ h1 {
     margin: 0;
     font-size: clamp(32px, 6vw, 44px);
     line-height: 1.2;
+    font-family: 'Barlow Condensed', 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 .lede {
@@ -156,15 +163,16 @@ h1 {
 .panel {
     margin-top: 40px;
     padding: 28px 24px;
-    border-radius: var(--radius);
+    border-radius: 1px;
     background: var(--card);
-    border: 1px solid var(--stroke);
+    border: 2px solid #6fa8dc;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .panel.highlight {
-    background: rgba(124, 58, 237, 0.12);
-    border-color: rgba(124, 58, 237, 0.45);
+    background: rgba(127, 231, 255, 0.06);
+    border-color: #6fa8dc;
 }
 
 .panel-header {
@@ -172,17 +180,27 @@ h1 {
     align-items: baseline;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 12px;
+    margin: -28px -24px 16px -24px;
+    padding: 12px 18px;
+    background: #6fa8dc;
+    color: #0d1524;
+    border-radius: 1px 1px 0 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .panel-title {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .panel-meta {
-    color: var(--muted);
-    font-size: 14px;
+    color: #0d1524;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .grid {
@@ -200,7 +218,7 @@ h1 {
 
 .experience-item {
     padding: 16px 18px;
-    border-radius: 14px;
+    border-radius: 1px;
     border: 1px solid var(--stroke);
     background: var(--card);
     box-shadow: var(--shadow);
@@ -231,14 +249,28 @@ h1 {
 }
 
 .card {
-    background: var(--card);
-    border: 1px solid var(--stroke);
-    border-radius: 14px;
-    padding: 18px 18px 16px;
+    position: relative;
+    background: #0d1524;
+    border: 1px solid rgba(127, 231, 255, 0.2);
+    border-radius: 10px;
+    padding: 16px 16px 14px 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-height: 180px;
+    gap: 10px;
+    min-height: 170px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 10px 30px rgba(5, 12, 24, 0.35);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: linear-gradient(180deg, rgba(127, 231, 255, 0.9), rgba(255, 184, 77, 0.7));
+    border-radius: 6px;
+    opacity: 0.8;
 }
 
 .card-top {
@@ -246,11 +278,22 @@ h1 {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    background: #6fa8dc;
+    color: #0d1524;
+    margin: -16px -16px 6px -20px;
+    padding: 8px 12px 8px 14px;
+    border-radius: 8px 8px 0 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .card h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .card p {
@@ -268,12 +311,14 @@ h1 {
 }
 
 .tags li {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid var(--stroke);
+    background: rgba(127, 231, 255, 0.06);
+    border: 1px solid rgba(127, 231, 255, 0.35);
     color: var(--text);
-    padding: 6px 10px;
-    border-radius: 12px;
-    font-size: 12px;
+    padding: 5px 9px;
+    border-radius: 10px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .chips {
@@ -311,12 +356,20 @@ h1 {
     align-items: center;
     gap: 8px;
     padding: 6px 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--stroke);
     color: var(--text);
     font-weight: 600;
     font-size: 13px;
+}
+
+.card-top .pill {
+    background: transparent;
+    border: none;
+    color: #0d1524;
+    padding: 0;
+    font-size: 12px;
 }
 
 .pill-icon .icon {
