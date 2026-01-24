@@ -426,6 +426,9 @@ h1 {
     .panel {
         padding: 22px 18px;
     }
+    .panel-header {
+        margin: -22px -18px 16px -18px;
+    }
     .footer {
         flex-direction: column;
         align-items: flex-start;
