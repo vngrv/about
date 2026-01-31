@@ -337,6 +337,17 @@ h1 {
     font-size: 14px;
 }
 
+.chips a.chip {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.chips a.chip:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent, rgba(255, 255, 255, 0.2));
+}
+
 .cta {
     display: flex;
     gap: 12px;
